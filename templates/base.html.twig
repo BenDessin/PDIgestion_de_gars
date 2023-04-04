@@ -1,0 +1,62 @@
+<html>     
+<head>         
+<meta charset="UTF-8">        
+<title>{% block title %}Welcome!{% endblock %}</title>               
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+<script> src="{{ asset('js/bootstrap.bundle.min.js')}}"</script>         
+{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}         
+{% block stylesheets %}             
+    {{ encore_entry_link_tags('app') }}         
+{% endblock %} 
+ 
+{% block javascripts %}             
+    {{ encore_entry_script_tags('app') }}         
+{% endblock %}
+<link rel="stylesheet" href="{{ asset('css/style.css')}}"> 
+</head>  
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand text-white" href="#">B13SERVICE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Infos</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">contact</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{path("app_login")}}">connexion</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>       
+    <div class="id1"></div>
+    <section>
+        {% block body %}
+            <div class="id3">
+                <p>Bonjour soyez le bien venue sur notre site de Transport</p>
+                <p>Nous sommes là pour vous garentir un voyage paisible et sécurisé</p>
+                <p>Merci de nous choisir pour vous accompagner là où vous voulez en toute sécurité</p>
+                <p>pour vivre plus d'expérience avec nous Veillez vous <a href="{{ path('app_login') }}">Connecter</a></p>    
+            </div>
+        {% endblock %}
+    </section>       
+</body>
+    <script> src="{{ asset('js/bootstrap.bundle.min.js')}}"</script>
+<footer>
+    <p>Copyright 2020 Ben Dessinateur - Tout droit reservé super</p>
+</footer>             
+</html

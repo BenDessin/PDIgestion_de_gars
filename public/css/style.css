@@ -1,0 +1,22 @@
+
+.id1{
+    width: 100%;
+    height: 50%;
+    background-image:url(../Img/14.jpg);
+}
+.id3{
+    text-align: center;
+    position: relative;
+}
+.nav-link
+{
+	color: white !important;
+}
+.nav-link:hover{
+	color: rgb(105, 212, 84) !important;
+}
+footer{
+	height: 50px;
+	padding-top: 30px;
+	text-align: center;
+}
